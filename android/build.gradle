@@ -1,7 +1,11 @@
 buildscript {
     repositories {
-        jcenter { url "http://jcenter.bintray.com/"; allowInsecureProtocol = true  }
-        maven {url "http://repo.spring.io/plugins-release/"; allowInsecureProtocol = true }
+        jcenter { url "http://jcenter.bintray.com/"
+        allowInsecureProtocol = true  
+        }
+        maven {url "http://repo.spring.io/plugins-release/"
+         allowInsecureProtocol = true 
+         }
         mavenCentral()
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
@@ -9,22 +13,23 @@ buildscript {
         }
         maven {
             url 'https://maven.google.com'
+            allowInsecureProtocol = true 
         }
     }
 
     dependencies { 
-        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.android.tools.build:gradle:3.1.4' //diferencia con el q funciona 3.1.4(3.5.3)
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 27  //el q funciona 27(28)
+    buildToolsVersion "27.0.3"  //27.0.3(28.0.3)
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 16//16(21)
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -40,8 +45,12 @@ android {
 }
 
 repositories {
-    jcenter { url "http://jcenter.bintray.com/"; allowInsecureProtocol = true  }
-    maven {url "http://repo.spring.io/plugins-release/"; allowInsecureProtocol = true }
+    jcenter { url "http://jcenter.bintray.com/"
+    allowInsecureProtocol = true 
+     }
+    maven {url "http://repo.spring.io/plugins-release/"
+     allowInsecureProtocol = true 
+     }
     mavenCentral()
     maven {
         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
@@ -49,6 +58,7 @@ repositories {
     }
     maven {
         url 'https://maven.google.com'
+        allowInsecureProtocol=true
     }
 }
 
