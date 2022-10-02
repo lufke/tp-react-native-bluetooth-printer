@@ -2,6 +2,8 @@
 
 HOLA SOY PIPECHELA...
 
+EDITADO EN LA NUBE
+
 React-Native plugin for the bluetooth ESC/POS & TSC printers.
 
 This plugin is a fork of react-native-bluetooth-escpos-printer. Because we made changes print picture and print qr code methods.
